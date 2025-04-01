@@ -1,0 +1,19 @@
+name: Hello Workflow
+
+on: [push]
+
+jobs:
+  say-hi:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Say hi
+        run: echo "Hey there! This workflow is alive!"
+   
+      - name: Show current directory
+        run: pwd
+
+      - name: List repo contents
+        run: ls -la
